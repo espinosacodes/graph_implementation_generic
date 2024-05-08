@@ -16,7 +16,7 @@ public class main {
 
 
         //dfs
-        System.out.println("dfs \n");
+        System.out.println("dfs\n");
 
         List<String> dfsResult = graph.dfs("A");
         for (String node : dfsResult) {
@@ -24,7 +24,7 @@ public class main {
         }
 
         //bfs
-        System.out.println("bfs \n");
+        System.out.println(" \nbfs \n");
         HashMap<String, Integer> bfsResult = graph.bfs("A");
         for (Map.Entry<String, Integer> entry : bfsResult.entrySet()) {
             System.out.println("Node " + entry.getKey() + " is at distance: " + entry.getValue());
@@ -33,7 +33,7 @@ public class main {
 
 
         //adjacent matrix
-        System.out.printf("adjacent matrix \n");
+        System.out.printf("\nadjacent matrix \n");
 
         int[][] adjacencyMatrix = graph.getAdjacencyMatrix();
         for (int i = 0; i < adjacencyMatrix.length; i++) {
@@ -44,7 +44,7 @@ public class main {
         }
 
         //adjacent list
-        System.out.println("adjacent list \n");
+        System.out.println("\nadjacent list \n");
 
         HashMap<String, List<String>> adjacencyList = graph.getAdjacencyList();
         for (Map.Entry<String, List<String>> entry : adjacencyList.entrySet()) {
