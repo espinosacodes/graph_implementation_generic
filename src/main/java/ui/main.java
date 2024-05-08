@@ -16,15 +16,25 @@ public class main {
 
 
         //dfs
+        System.out.println("dfs \n");
+
         List<String> dfsResult = graph.dfs("A");
         for (String node : dfsResult) {
             System.out.println("Node: " + node);
         }
 
         //bfs
+        System.out.println("bfs \n");
+        HashMap<String, Integer> bfsResult = graph.bfs("A");
+        for (Map.Entry<String, Integer> entry : bfsResult.entrySet()) {
+            System.out.println("Node " + entry.getKey() + " is at distance: " + entry.getValue());
+        }
+
 
 
         //adjacent matrix
+        System.out.printf("adjacent matrix \n");
+
         int[][] adjacencyMatrix = graph.getAdjacencyMatrix();
         for (int i = 0; i < adjacencyMatrix.length; i++) {
             for (int j = 0; j < adjacencyMatrix[i].length; j++) {
@@ -32,5 +42,14 @@ public class main {
             }
             System.out.println();
         }
+
+        //adjacent list
+        System.out.println("adjacent list \n");
+
+        HashMap<String, List<String>> adjacencyList = graph.getAdjacencyList();
+        for (Map.Entry<String, List<String>> entry : adjacencyList.entrySet()) {
+            System.out.println("Node " + entry.getKey() + " is connected to: " + entry.getValue());
+        }
+
     }
 }
